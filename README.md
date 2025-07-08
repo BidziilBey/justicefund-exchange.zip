@@ -1,1 +1,1 @@
-# justicefund-exchange.zip
+# JusticeFund Exchange README placeholder

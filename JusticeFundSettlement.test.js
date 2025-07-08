@@ -1,0 +1,1 @@
+// Hardhat test file placeholder
