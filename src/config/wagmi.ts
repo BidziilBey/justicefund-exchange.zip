@@ -3,7 +3,7 @@ import { mainnet, polygon, optimism, arbitrum, sepolia } from 'wagmi/chains'
 
 export const config = getDefaultConfig({
   appName: 'JusticeFund Exchange',
-  projectId: 'YOUR_PROJECT_ID', // Get this from WalletConnect Cloud
+  projectId: '2f05a7cac472ced85b0dfd95c1fd02ae', // Temporary project ID for development
   chains: [mainnet, polygon, optimism, arbitrum, sepolia],
   ssr: false,
 })
