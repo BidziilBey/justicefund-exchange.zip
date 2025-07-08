@@ -219,7 +219,8 @@ const Settlements: React.FC = () => {
         size="lg"
       >
         {selectedSettlement && (
-          <div className="space-y-6">
+          <>
+            <div className="space-y-6">
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <h3 className="text-sm font-medium text-gray-900 mb-2">Settlement Amount</h3>
@@ -264,12 +265,13 @@ const Settlements: React.FC = () => {
                 <p className="text-gray-600">{formatDate(selectedSettlement.dateUpdated, 'long')}</p>
               </div>
             </div>
-          </div>
+            </div>
+            <div className="flex justify-end space-x-3 pt-4 border-t mt-6">
+              <Button variant="outline">Download Report</Button>
+              <Button>View Documents</Button>
+            </div>
+          </>
         )}
-        <div className="flex justify-end space-x-3 pt-4 border-t mt-6">
-          <Button variant="outline">Download Report</Button>
-          <Button>View Documents</Button>
-        </div>
       </Modal>
 
       {/* Create Settlement Modal */}
@@ -279,7 +281,8 @@ const Settlements: React.FC = () => {
         title="Create New Settlement"
         size="lg"
       >
-        <div className="space-y-4">
+        <>
+          <div className="space-y-4">
           <Input
             label="Settlement Title"
             placeholder="Enter settlement title..."
@@ -309,15 +312,16 @@ const Settlements: React.FC = () => {
               placeholder="Describe the settlement..."
             />
           </div>
-        </div>
-        <div className="flex justify-end space-x-3 pt-4 border-t mt-6">
-          <Button variant="outline" onClick={() => setShowCreateModal(false)}>
-            Cancel
-          </Button>
-          <Button onClick={() => setShowCreateModal(false)}>
-            Create Settlement
-          </Button>
-        </div>
+          </div>
+          <div className="flex justify-end space-x-3 pt-4 border-t mt-6">
+            <Button variant="outline" onClick={() => setShowCreateModal(false)}>
+              Cancel
+            </Button>
+            <Button onClick={() => setShowCreateModal(false)}>
+              Create Settlement
+            </Button>
+          </div>
+        </>
       </Modal>
     </div>
   )
